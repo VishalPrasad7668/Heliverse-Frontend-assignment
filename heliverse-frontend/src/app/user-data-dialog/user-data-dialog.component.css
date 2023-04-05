@@ -1,0 +1,18 @@
+.dialog-body{
+    background-color: bisque;
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+#datas{
+    margin-left: 20px;
+}
+img{
+    margin-top: 40px;
+    margin-left: 150px;
+    width: 120px;
+    height: 120px;
+}
+span{
+    color: blue;
+}

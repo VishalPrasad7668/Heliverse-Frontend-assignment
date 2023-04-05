@@ -1,0 +1,12 @@
+<div class="dialog-body">
+    <div *ngIf="receivedData" id="datas">
+        <h2> Id: {{receivedData.id}}</h2>
+        <p><span>First Name: </span>{{receivedData.first_name}}</p>
+        <p><span>Last Name: </span>{{receivedData.last_name}}</p>
+        <p><span>Email: </span>{{receivedData.email}}</p>
+        <p><span>Gender: </span>{{receivedData.gender}}</p>
+        <p><span>Domain: </span>{{receivedData.domain}}</p>
+        <p><span>Availability: </span>{{receivedData.available}}</p>
+    </div>
+    <img src="{{receivedData.avatar}}">
+</div>

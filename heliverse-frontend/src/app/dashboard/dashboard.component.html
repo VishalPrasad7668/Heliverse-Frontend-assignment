@@ -1,0 +1,34 @@
+<div class="container">
+
+    <div id="search">
+        <mat-form-field appearance="outline">
+            <mat-label>Search by Domain, Gender and Availability</mat-label>
+            <input type="text" matInput [(ngModel)]="searchText">
+            <mat-icon matSuffix>search</mat-icon>
+        </mat-form-field>
+    </div>
+    
+    <div class="row">
+        <div *ngFor="let user of userData | filter:searchText | paginate: 
+        { itemsPerPage: 20, currentPage: page }" class="col-lg-4 mt-3">
+            <mat-card class="example-card">
+                <mat-card-header>
+                    <mat-card-title>
+                        <span id="span">
+                            <h3><b>Full Name:</b> {{user.first_name}}</h3> <img src="{{user.avatar}}">
+                        </span>
+                    </mat-card-title>
+
+                </mat-card-header>
+
+                <mat-card-actions>
+                    <button mat-icon-button id="infobtn"
+                        (click)="openUserDetails(user)"><mat-icon>info</mat-icon></button>
+
+                </mat-card-actions>
+            </mat-card>
+        </div>
+    </div>
+</div>
+<pagination-controls (pageChange)="page = $event" class="pgctrl">
+</pagination-controls>
